@@ -1,15 +1,15 @@
-## Closed Accounts
+# Closed Accounts
 
-### Problem Statement
+## Problem Statement
 Given a table of account statuses, write a query to get the percentage of accounts that were active on December 31st, 2019, and closed on January 1st, 2020, over the total number of accounts that were active on December 31st. Each account has only one daily record indicating its status at the end of the day.
 
 Note: Round the result to 2 decimal places.
 
-### Example:
+## Example:
 
-##### Input:
+### Input:
 
-##### account_status table
+### account_status table
 
 Column	    Type
 account_id	INTEGER
@@ -22,7 +22,7 @@ account_id	date	      status
 2	          2020-01-01	closed
 
 
-##### Output:
+### Output:
 
 Column	            Type
 percentage_closed	  FLOAT
