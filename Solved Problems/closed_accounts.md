@@ -26,3 +26,45 @@ account_id	date	      status
 
 Column	            Type
 percentage_closed	  FLOAT
+
+
+
+
+
+```
+WITH open_accounts AS
+(SELECT
+    account_id
+
+FROM
+    account_status
+
+WHERE
+    date = '2019-12-31' AND
+    status = 'open'),
+
+
+closed_accounts AS
+(SELECT
+    account_id
+
+FROM
+    account_status
+
+WHERE
+    date = '2020-01-01' AND
+    status = 'closed')
+
+
+SELECT
+    ROUND(COUNT(*) / (SELECT COUNT(*) FROM open_accounts), 2) AS percentage_closed
+
+FROM
+    open_accounts op
+
+JOIN
+    closed_accounts cl
+
+ON op.account_id = cl.account_id
+
+```
