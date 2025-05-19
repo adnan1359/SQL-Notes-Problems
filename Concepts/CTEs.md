@@ -3,7 +3,9 @@
 
   
 
-A **Common Table Expression (CTE)** is a temporary result set in SQL that you can define within a query and reference multiple times in the same query. CTEs are useful for breaking down complex queries into simpler, more readable parts, improving maintainability and clarity. They are defined using the `WITH` clause and exist only for the duration of the query execution.
+  - A **Common Table Expression (CTE)** is a temporary result set in SQL that you can define within a query and reference multiple times in the same query.
+  - CTEs are useful for breaking down complex queries into simpler, more readable parts, improving maintainability and clarity.
+  - They are defined using the `WITH` clause and exist only for the duration of the query execution.
 
   
 
@@ -324,18 +326,18 @@ ORDER BY total_sales DESC;
   
 
 2. **Hierarchical Data**:
-
-  - Given a table `categories` with columns `category_id`, `category_name`, and `parent_category_id`, write a recursive CTE to display the full hierarchy of categories, including a column that shows the path (e.g., "Electronics > Laptops > Gaming Laptops").
   
-  - Ensure the results are ordered by the hierarchy level and category name.
+    - Given a table `categories` with columns `category_id`, `category_name`, and `parent_category_id`, write a recursive CTE to display the full hierarchy of categories, including a column that shows the path (e.g., "Electronics > Laptops > Gaming Laptops").
+    
+    - Ensure the results are ordered by the hierarchy level and category name.
 
   
 
 3. **Data Cleanup**:
 
-  - You have a `transactions` table with columns `transaction_id`, `customer_id`, `amount`, and `transaction_date`. Some customers have multiple transactions on the same date, but you only want the latest transaction per customer per date.
-  
-  - Use a CTE to identify the latest transaction for each customer-date combination and then calculate the total amount per customer.
+    - You have a `transactions` table with columns `transaction_id`, `customer_id`, `amount`, and `transaction_date`. Some customers have multiple transactions on the same date, but you only want the latest transaction per customer per date.
+    
+    - Use a CTE to identify the latest transaction for each customer-date combination and then calculate the total amount per customer.
 
   
 
@@ -343,16 +345,16 @@ ORDER BY total_sales DESC;
 
   - Using a `products` table with columns `product_id`, `category`, `price`, and `stock_quantity`, write a query with multiple CTEs to:
   
-  - Calculate the average price per category.
-  
-  - Identify products with stock quantities below 10.
-  
-  - Combine the results to show products with low stock in categories where the average price is above $50.
+    - Calculate the average price per category.
+    
+    - Identify products with stock quantities below 10.
+    
+    - Combine the results to show products with low stock in categories where the average price is above $50.
 
   
 
 5. **Recursive Challenge**:
 
-  - You have a `flights` table with columns `flight_id`, `source_city`, `destination_city`, and `cost`. Write a recursive CTE to find all possible flight paths from a starting city to a destination city, including the total cost and the path (e.g., "New York -> Chicago -> Los Angeles").
-  
-  - Limit the recursion to a maximum of 3 hops (intermediate cities).
+    - You have a `flights` table with columns `flight_id`, `source_city`, `destination_city`, and `cost`. Write a recursive CTE to find all possible flight paths from a starting city to a destination city, including the total cost and the path (e.g., "New York -> Chicago -> Los Angeles").
+    
+    - Limit the recursion to a maximum of 3 hops (intermediate cities).
